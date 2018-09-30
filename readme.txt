@@ -1,6 +1,6 @@
-1.ÐÞ¸Ädemo/database/conn.goÖÐmongoµÄÁ¬½ÓµØÖ·£¨Session,err = mgo.Dial("mongodb://admin:admin@115.159.77.155:11000?maxPoolSize=100")£©£¬Ä¬ÈÏÊÇÎÒÔÆ·þÎñÆ÷µÄÒ»¸ö²âÊÔÊý¾Ý¿âµØÖ·£¬ÓÐauthÈÏÖ¤
-2.½«docker¹¹½¨ÎÄ¼þ¼Ð·Åµ½·þÎñÆ÷ÉÏ£¬½øÈëdocker¹¹½¨ÎÄ¼þÄ¿Â¼ÏÂ Ö´ÐÐ"docker build -t goweb ."Íê³É×Ô¶¯¹¹½¨docker¾µÏñ£¨¸Ã¾µÏñÓÐgo»·¾³£¬×ÔÐÐ±àÒëdemo£¬Ã»ÓÐÊ¹ÓÃÔ¤ÏÈ±àÒëºÃdemoÖ±½ÓÈÝÆ÷ÔËÐÐ¶þ½øÖÆÎÄ¼þµÄ·½·¨£© ¡£
-3.¹¹½¨Íê³É Ö´ÐÐ¡°docker run -d --name=goweb -p 8080:8000 goweb¡±¾ÍÄÜÆô¶¯ÈÝÆ÷½«·þÎñÆ÷8080¶Ë¿ÚÓ³Éäµ½ÈÝÆ÷ÄÚ²¿µÄ8000¶Ë¿Ú£¬8080¶Ë¿Ú¿ÉÒÔ×Ô¶¨Òå
-4.web·þÎñµÄ¶Ë¿ÚÊÇ8000£¬¿ÉÒÔÔÚdemo/router/router.goÖÐ×ÔÐÐÐÞ¸Ä£¬È»ºóÔÚdockerfileÖÐ¿ª·ÅÐÞ¸ÄºóµÄ¶Ë¿Ú¡£
-5.²âÊÔ ÔÚ·þÎñÆ÷ÖÕ¶ËÊ¹ÓÃ curl http://localhost:8080/v1/hello/aa ½øÐÐ¼òµ¥²âÊÔ
-6.ÈçÓÐÒÉÎÊqq:1217286494 ÁªÏµÎÒ¡£
+1.ä¿®æ”¹demo/database/conn.goä¸­mongoçš„è¿žæŽ¥åœ°å€ï¼ˆSession,err = mgo.Dial("mongodb://admin:admin@115.159.77.155:11000?maxPoolSize=100")ï¼‰ï¼Œé»˜è®¤æ˜¯æˆ‘äº‘æœåŠ¡å™¨çš„ä¸€ä¸ªæµ‹è¯•æ•°æ®åº“åœ°å€ï¼Œæœ‰authè®¤è¯
+2.å°†dockerfileå’Œdemoæ–‡ä»¶å¤¹æ”¾åˆ°æœåŠ¡å™¨ä¸Šçš„ä¸€ä¸ªç©ºç›®å½•ä¸‹ï¼Œè¿›å…¥è¯¥ç›®å½• æ‰§è¡Œ"docker build -t goweb ."å®Œæˆè‡ªåŠ¨æž„å»ºdockeré•œåƒï¼ˆè¯¥é•œåƒæœ‰goçŽ¯å¢ƒï¼Œè‡ªè¡Œç¼–è¯‘demoï¼Œæ²¡æœ‰ä½¿ç”¨é¢„å…ˆç¼–è¯‘å¥½demoç›´æŽ¥å®¹å™¨è¿è¡ŒäºŒè¿›åˆ¶æ–‡ä»¶çš„æ–¹æ³•ï¼‰ ã€‚
+3.æž„å»ºå®Œæˆ æ‰§è¡Œâ€œdocker run -d --name=goweb -p 8080:8000 gowebâ€å°±èƒ½å¯åŠ¨å®¹å™¨å°†æœåŠ¡å™¨8080ç«¯å£æ˜ å°„åˆ°å®¹å™¨å†…éƒ¨çš„8000ç«¯å£ï¼Œ8080ç«¯å£å¯ä»¥è‡ªå®šä¹‰
+4.webæœåŠ¡çš„é»˜è®¤ç«¯å£æ˜¯8000ï¼Œå¯ä»¥åœ¨demo/router/router.goä¸­è‡ªè¡Œä¿®æ”¹ï¼Œç„¶åŽåœ¨dockerfileä¸­ä¿®æ”¹éœ€è¦å¼€æ”¾çš„ç«¯å£ã€‚
+5.æµ‹è¯• åœ¨æœåŠ¡å™¨ç»ˆç«¯ä½¿ç”¨ curl http://localhost:8080/v1/hello/aa è¿›è¡Œç®€å•æµ‹è¯•
+6.å¦‚æœ‰ç–‘é—®qq:1217286494 è”ç³»æˆ‘ã€‚
