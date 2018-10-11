@@ -17,7 +17,6 @@ func Init() {
 	r.Use(Cors())
 	v1 := r.Group("/v1")
 	{
-		// v1.Use(Cors())
 		// v1.GET("/hello", handlers.HelloPage)
 		v1.GET("/hello/:name", func(c *gin.Context) {
 			name := c.Param("name")
@@ -30,8 +29,8 @@ func Init() {
 		// })
 
 		v1.POST("/login", func(c *gin.Context) {
-			username := c.Query("username")
-			password := c.Query("password")
+			username := c.PostForm("username")
+			password := c.PostForm("password")
 			h := md5.New()
 			h.Write([]byte(password + username))
 			password = fmt.Sprintf("%x", h.Sum(nil))
@@ -41,11 +40,11 @@ func Init() {
 		})
 
 		v1.POST("/register", func(c *gin.Context) {
-			username := c.Query("zhanghao")
-			password := c.Query("password")
-			realname := c.Query("realname")
-			identityCard := c.Query("identity_card")
-			phoneNumber := c.Query("phone_number")
+			username := c.PostForm("zhanghao")
+			password := c.PostForm("password")
+			realname := c.PostForm("realname")
+			identityCard := c.PostForm("identity_card")
+			phoneNumber := c.PostForm("phone_number")
 			h := md5.New()
 			h.Write([]byte(password + username))
 			password = fmt.Sprintf("%x", h.Sum(nil))
@@ -81,7 +80,7 @@ func Init() {
 	// 		})
 	// 	})
 	// }
-
+	}
 	// Cors .
 	func Cors() gin.HandlerFunc {
 	    return func(c *gin.Context) {
@@ -119,4 +118,5 @@ func Init() {
 	    }
 	}
 
-}
+
+
