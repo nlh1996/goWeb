@@ -4,3 +4,4 @@
 4.web服务的默认端口是8000，可以在demo/router/router.go中自行修改，然后在dockerfile中修改需要开放的端口。
 5.测试 在服务器终端使用 curl http://localhost:8080/v1/hello/aa 进行简单测试
 6.如有疑问qq:1217286494 联系我。
+7.此项目只是一个demo,更多golang使用和封装请参考我bbs_server和go-block项目。
